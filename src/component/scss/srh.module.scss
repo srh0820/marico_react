@@ -1,0 +1,222 @@
+// sns
+.sns {
+    img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 10px;
+        position: relative; 
+    }
+
+    .snsImgR {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease;
+        z-index: 1;
+        &:hover {
+            transform: scale(1.5);
+            z-index: 2; 
+        }
+        &::after {
+            content: "";
+            background: url(../../img/instagram2.svg) no-repeat;
+            width: 13px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+    }
+
+    .blurred {
+        filter: blur(2px);
+    }
+
+    .snsLefttextR {
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            span {
+                color: #B2A569;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .snsRighttextR {
+        strong {
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            background: #000;
+            border-radius: 30px;
+            width: 97px;
+            height: 37px;
+            display: flex;  /* Flexbox 사용 */
+            justify-content: center;    /* 수평 가운데 정렬 */
+            align-items: center;    /* 수직 가운데 정렬 */
+        }
+        p {
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+.mainslider {
+    position: relative;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #ffffff;
+        border-bottom: 1px solid #000;
+        width: 100%;
+        height: 44px;
+        left: 0;
+        bottom: 0;
+    }
+    .mainwrapper{
+        position: relative;
+        margin-left:-750px;
+        overflow-x: hidden;
+        .mainTextbox{
+            max-width: 700px;
+            margin-top: 396px;     
+            min-width: 420px;
+            width:20vw;            
+            .mainSlidetext{
+                p {
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: white;
+                    background: #000;
+                    border-radius: 30px;
+                    width: 155px;
+                    height: 41px;
+                    display: flex; 
+                    justify-content: center;    
+                    align-items: center;  
+                }
+                strong {
+                    font-size: 36px;
+                    font-weight: 500;
+                    line-height: 46px;
+                    letter-spacing: -6%;
+                }
+                .text_with_underline {
+                    text-decoration: none;
+                    font-size: 18px;
+                    margin-bottom: 1px; /* 텍스트와 밑줄 사이의 공간 조정 */
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 1px; 
+                        background-color: #333; 
+                        margin-top: 1px; 
+                        width: 4.8rem;
+                    }
+                }
+            }
+        }
+        .mainPagebox{      
+            .swiper_progress_bar {
+                bottom: 17px;
+                right: 60%;
+                height: 2px;
+                background: #ccc;
+                overflow: hidden;
+                position: absolute;
+                width: 170px;
+                .slide_progress_bar {
+                    position: relative;          
+                    width: 100%;
+                    height: 100%;
+                    .fill {
+                        background: #000;
+                        height: 100%;
+                        width: 0%; /* 초기 너비 설정 */
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: width 5s linear; 
+                    }
+                }
+            }
+            .numberui{
+                margin-left: 200px;
+                align-items: center;
+                font-size: 15px;
+                letter-spacing: 0 !important;
+                .swiper_pagination_current{
+                    color: #000;
+                }
+                .swiper_pagination_total{
+                    color: #666;
+                }
+            }
+            .btn{
+                position: absolute;
+                bottom: 7px;
+                right: 20%;
+                width: 60px;
+                padding: 0 3px;
+                border: 0;
+                z-index: 100000;
+                .button_prev{
+                    margin: 0;
+                    border: 0;
+                    width: 10px;
+                    height: 11px;
+                    background: url('../../img/mainLeft.svg') no-repeat;
+                    background-size: 10px;
+                }               
+                .button_autoControl {
+                    overflow: hidden;
+                    display: inline-block;
+                    padding: 0;
+                    width: 10px;
+                    height: 11px;
+                    border: none; 
+                    background: url('../../img/mainStop.svg') no-repeat; 
+                }                
+                .button_autoControl.play {
+                    background: url('../../img/mainPlay.svg') no-repeat; 
+                }                      
+                .button_next{
+                    margin: 0;
+                    border: 0;
+                    width: 10px;
+                    height: 11px;
+                    background: url('../../img/mainRight.svg') no-repeat;
+                }
+            }
+        }
+    }
+
+    .mainImgbox{
+        margin-top: 264px;      
+        height: 580px;
+        z-index: 2;
+        width: 1100px;
+        .visible{
+            overflow: visible !important;
+        }
+        img{
+            // margin-right: 27px;
+            border-radius: 10px;
+            width: 100%;
+            height: 580px;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+}
