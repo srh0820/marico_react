@@ -126,79 +126,88 @@
                     }
                 }
             }
-        }
-        .mainPagebox{      
-            .swiper_progress_bar {
-                bottom: 17px;
-                right: 60%;
-                height: 2px;
-                background: #ccc;
-                overflow: hidden;
-                position: absolute;
-                width: 170px;
-                .slide_progress_bar {
-                    position: relative;          
-                    width: 100%;
-                    height: 100%;
-                    .fill {
-                        background: #000;
-                        height: 100%;
-                        width: 0%; /* 초기 너비 설정 */
+            .mainPagebox{     
+                position: relative;
+                top: 46%;
+                z-index: 999;
+                .Page{
+                    width: 374px;
+                    height: 44px;
+                    bottom: 200px;
+                    .swiper_progress_bar {
+                        bottom: 17px;
+                        height: 2px;
+                        background: #ccc;
+                        overflow: hidden;
                         position: absolute;
-                        left: 0;
-                        top: 0;
-                        transition: width 5s linear; 
+                        width: 170px;
+
+                        .slide_progress_bar {
+                            position: relative;          
+                            width: 100%;
+                            height: 100%;
+                            .fill {
+                                background: #000;
+                                height: 100%;
+                                width: 0%; /* 초기 너비 설정 */
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transition: width 5s linear; 
+                            }
+                        }
                     }
-                }
-            }
-            .numberui{
-                margin-left: 200px;
-                align-items: center;
-                font-size: 15px;
-                letter-spacing: 0 !important;
-                .swiper_pagination_current{
-                    color: #000;
-                }
-                .swiper_pagination_total{
-                    color: #666;
-                }
-            }
-            .btn{
-                position: absolute;
-                bottom: 7px;
-                right: 20%;
-                width: 60px;
-                padding: 0 3px;
-                border: 0;
-                z-index: 100000;
-                .button_prev{
-                    margin: 0;
-                    border: 0;
-                    width: 10px;
-                    height: 11px;
-                    background: url('../../img/mainLeft.svg') no-repeat;
-                    background-size: 10px;
-                }               
-                .button_autoControl {
-                    overflow: hidden;
-                    display: inline-block;
-                    padding: 0;
-                    width: 10px;
-                    height: 11px;
-                    border: none; 
-                    background: url('../../img/mainStop.svg') no-repeat; 
-                }                
-                .button_autoControl.play {
-                    background: url('../../img/mainPlay.svg') no-repeat; 
-                }                      
-                .button_next{
-                    margin: 0;
-                    border: 0;
-                    width: 10px;
-                    height: 11px;
-                    background: url('../../img/mainRight.svg') no-repeat;
-                }
-            }
+                    .numberui{
+                        position: absolute;
+                        width: 60px;
+                        bottom: 17px;
+                        margin-left: 200px;
+                        font-size: 15px;
+                        letter-spacing: 0 !important;
+                        .swiper_pagination_current{
+                            color: #000;
+                        }
+                        .swiper_pagination_total{
+                            color: #666;
+                        }
+                    }
+                    .btn{
+                        position: absolute;
+                        bottom: 7px;
+                        right: 20%;
+                        width: 60px;
+                        padding: 0 3px;
+                        border: 0;
+                        .button_prev{
+                            margin: 0;
+                            border: 0;
+                            width: 10px;
+                            height: 11px;
+                            background: url('../../img/mainLeft.svg') no-repeat;
+                            background-size: 10px;
+                        }               
+                        .button_autoControl {
+                            overflow: hidden;
+                            display: inline-block;
+                            padding: 0;
+                            width: 10px;
+                            height: 11px;
+                            border: none; 
+                            background: url('../../img/mainStop.svg') no-repeat; 
+                        }                
+                        .button_autoControl.play {
+                            background: url('../../img/mainPlay.svg') no-repeat; 
+                        }                      
+                        .button_next{
+                            margin: 0;
+                            border: 0;
+                            width: 10px;
+                            height: 11px;
+                            background: url('../../img/mainRight.svg') no-repeat;
+                        }
+                    }
+                } 
+            }   
         }
     }
 

@@ -64,21 +64,21 @@ const MainSlider = () => {
   return (
     <section ref={mainsliderobjRef} className={`${mainSlider.mainslider} overflow-hidden`} style={{ backgroundColor: bgColor }}>
       <div className={`${mainSlider.mainwrapper} d-flex justify-content-center start-50 position-relative`}>
-        <div className={`${mainSlider.mainTextbox} d-flex mx-0 position-relative`}>
+        <div className={mainSlider.mainTextbox}>
           <Swiper
             ref={textSwiperRef}
             spaceBetween={0}
             loop={true}
             loopAdditionalSlides={2}
             pagination={{
-              el: ".mainPagebox .numberui",
+              el: `.${mainSlider.numberui}`,
               type: 'fraction',
               formatFractionCurrent: number => ('0' + number).slice(-2),
               formatFractionTotal: number => ('0' + number).slice(-2),
             }}
             navigation={{
-              nextEl: ".mainPagebox .button_next",
-              prevEl: ".mainPagebox .button_prev",
+              nextEl: `.${mainSlider.button_next}`,
+              prevEl: `.${mainSlider.button_prev}`
             }}
             autoplay={{
               delay: 5000,
@@ -95,7 +95,32 @@ const MainSlider = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+            <div className={`${mainSlider.mainPagebox}`}>
+                <div className={`${mainSlider.Page} d-flex align-items-centern justify-content-between`}>
+                    <div className={`swiper_pagination ${mainSlider.swiper_progress_bar} d-flex align-items-center`}>
+                      <span className={mainSlider.slide_progress_bar}>
+                        <span className={mainSlider.fill} ref={progressBarRef}></span>
+                      </span>
+                    </div>
+                    <div className={`swiper_pagination ${mainSlider.numberui}`}></div>
+                    <div className={`${mainSlider.btn} d-flex align-items-center justify-content-between p-0`}>
+                      <div className={mainSlider.button_prev}>
+                        <span className="visually-hidden">이전</span>
+                      </div>
+                      <div className={mainSlider.button_auto}>
+                        <button className={mainSlider.button_autoControl} onClick={togglePlayPause}>
+                          <span className="visually-hidden">{isPlaying ? '멈춤' : '재생'}</span>
+                        </button>
+                      </div>
+                      <div className={mainSlider.button_next}>
+                        <span className="visually-hidden">다음</span>
+                    </div>
+                  </div>
+            </div>
         </div>
+        </div>
+
+       
 
         <div className="col overflow-hidden position-relative">
           <div className={`${mainSlider.mainImgbox} mx-0 overflow-visible`}>
@@ -110,6 +135,10 @@ const MainSlider = () => {
               }}
               slidesPerView={1}
               modules={[Navigation, Pagination, Autoplay, Controller]}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
               onSlideChange={(swiper) => handleSlideChange(swiper)}
             >
               {slidesData.map((slide, index) => (
@@ -123,29 +152,7 @@ const MainSlider = () => {
           </div>
         </div>
 
-        <div className={`${mainSlider.mainPagebox} d-flex align-items-center`}>
-          <div className="Page d-flex align-items-centern justify-content-between">
-            <div className={`swiper_pagination ${mainSlider.swiper_progress_bar} d-flex align-items-center col`}>
-              <span className={mainSlider.slide_progress_bar}>
-                <span className={mainSlider.fill} ref={progressBarRef}></span>
-              </span>
-            </div>
-            <div className={`swiper_pagination ${mainSlider.numberui} d-flex align-items-center`}></div>
-            <div className={`${mainSlider.btn} d-flex align-items-center justify-content-between`}>
-              <div className={mainSlider.button_prev}>
-                <span className="visually-hidden">이전</span>
-              </div>
-              <div className={mainSlider.button_auto}>
-                <button className={mainSlider.button_autoControl} onClick={togglePlayPause}>
-                  <span className="visually-hidden">{isPlaying ? '멈춤' : '재생'}</span>
-                </button>
-              </div>
-              <div className={mainSlider.button_next}>
-                <span className="visually-hidden">다음</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
