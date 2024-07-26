@@ -1,0 +1,10 @@
+/* main  */
+#main .fillnone {
+    transform: none;
+    background: #ccc;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
