@@ -8,7 +8,7 @@ import 'swiper/css/controller';
 import { Navigation, Pagination, Autoplay, Controller } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import mainSlider from './scss/srh.module.scss';
-import '../css/common.css'
+import '../css/common.css';
 import slides from '../json/maindata.json';
 
 const MainSlider = () => {
@@ -68,9 +68,10 @@ const MainSlider = () => {
   }, [swiperTextInstance, swiperImgInstance, isPlaying]);
 
   const togglePlayPause = () => {
-    const playPauseButton = document.querySelector(`.bttn`);
+    const playPauseButton = document.querySelector('.btnchange');
     const fillElement = document.querySelector(`.${mainSlider.fill}`);
-    
+    const fillCoverElement = document.querySelector(`.${mainSlider.fillCover}`);
+
     if (isPlaying) {
       swiperTextInstance.autoplay.stop();
       swiperImgInstance.autoplay.stop();
@@ -79,6 +80,9 @@ const MainSlider = () => {
       if (fillElement) {
         fillElement.style.transition = 'none';
         fillElement.style.width = '0%';
+      }
+      if (fillCoverElement) {
+        fillCoverElement.style.display = 'block';
       }
     } else {
       swiperTextInstance.params.autoplay = {
@@ -89,6 +93,9 @@ const MainSlider = () => {
       resetProgressBar();
       setIsPlaying(true);
       playPauseButton.classList.remove('play');
+      if (fillCoverElement) {
+        fillCoverElement.style.display = 'none';
+      }
     }
   };
 
@@ -107,8 +114,8 @@ const MainSlider = () => {
               formatFractionTotal: number => ('0' + number).slice(-2),
             }}
             navigation={{
-              nextEl: `.${mainSlider.button_next}`,
-              prevEl: `.${mainSlider.button_prev}`
+              nextEl: `.${mainSlider.buttonNext}`,
+              prevEl: `.${mainSlider.buttonPrev}`
             }}
             autoplay={{
               delay: 5000,
@@ -130,22 +137,23 @@ const MainSlider = () => {
             <div className={`swiper_pagination ${mainSlider.swiper_progress_bar} d-flex align-items-center`}>
               <span className={mainSlider.slide_progress_bar}>
                 <span className={mainSlider.fill}></span>
+                <span className={`${mainSlider.fillCover}`} style={{ display: isPlaying ? 'none' : 'block' }}></span>
               </span>
             </div>
             <div className={`swiper_pagination ${mainSlider.numberui}`}></div>
             <div className={`${mainSlider.btn} d-flex align-items-center justify-content-between`}>
-              <button className={mainSlider.button_prev}>
+              <button className={mainSlider.buttonPrev}>
                 <span className="visually-hidden">이전</span>
               </button>
               <div className={`${mainSlider.button_auto} d-flex align-items-center`}>
                 <button
-                  className={`${mainSlider.button_autoControl} bttn`}
+                  className={`${mainSlider.button_autoControl} btnchange ${!isPlaying ? 'play' : ''}`}
                   onClick={togglePlayPause}
                 >
                   <span className="visually-hidden">{isPlaying ? '멈춤' : '재생'}</span>
                 </button>
               </div>
-              <button className={mainSlider.button_next}>
+              <button className={mainSlider.buttonNext}>
                 <span className="visually-hidden">다음</span>
               </button>
             </div>

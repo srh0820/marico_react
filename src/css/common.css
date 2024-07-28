@@ -1,10 +1,7 @@
 /* main  */
-#main .fillnone {
-    transform: none;
-    background: #ccc;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+
+.play{
+    background: url('../img/mainPlay.svg') no-repeat !important; 
+    background-size: auto !important;
+    background-position: center !important;
+}    
