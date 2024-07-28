@@ -133,7 +133,7 @@ const MainSlider = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className={`${mainSlider.mainPagebox} d-flex align-items-center justify-content-between`}>
+          <div className={`${mainSlider.mainPagebox} d-flex align-items-center`}>
             <div className={`swiper_pagination ${mainSlider.swiper_progress_bar} d-flex align-items-center`}>
               <span className={mainSlider.slide_progress_bar}>
                 <span className={mainSlider.fill}></span>
