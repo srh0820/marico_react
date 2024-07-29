@@ -7,7 +7,7 @@ function Sns() {
     return (
         <section className={snsscss.sns}>
             <div className="container-1400">
-                <div className="row justify-content-between align-items-end">
+                <div className={`${snsscss.textbox} row justify-content-between align-items-end`}>
                     <div className={`${snsscss.snsLefttextR} col-lg-6`}>
                         <div className="d-flex align-items-center mb-2">
                             <i><img src={instagram} alt="인스타그램 아이콘" /></i>
@@ -16,8 +16,8 @@ function Sns() {
                                 <p className="mb-0">여행자들의 눈으로 본 경주</p>
                             </div>
                         </div>
-                        <p>필수 해시태그 <span>#경주어때 #마이리얼경주</span> 와 함께 경주의 멋진 사진을 남겨주시면<br />
-                        추첨을 통해서 10분께 스타벅스 커피 쿠폰을 보내드립니다.</p>
+                        <p>필수 해시태그 <span className={snsscss.colorchange}>#경주어때 #마이리얼경주</span> 와 함께 경주의 멋진 사진을 남겨주시면<br />
+                        추첨을 통해서 <span className={snsscss.spantext}>10분께 </span>스타벅스 커피 쿠폰을 보내드립니다.</p>
                     </div> 
                     <div className={`${snsscss.snsRighttextR} col-md-6 d-flex justify-content-end`}>
                         <ul className="">
