@@ -18,7 +18,7 @@ const MainSlider = () => {
   const [swiperImgInstance, setSwiperImgInstance] = useState(null);
 
   const resetProgressBar = () => {
-    const fillElement = document.querySelector(`.${mainSlider.fill}`);
+    const fillElement = document.querySelector(`.mainSlider_fill`);
     if (fillElement) {
       fillElement.style.transition = 'none';
       fillElement.style.width = '0%';
@@ -30,7 +30,7 @@ const MainSlider = () => {
   };
 
   useEffect(() => {
-    const fillElement = document.querySelector(`.${mainSlider.fill}`);
+    const fillElement = document.querySelector(`.mainSlider_fill`);
     
     if (swiperTextInstance) {
       swiperTextInstance.on('init', () => {
@@ -69,8 +69,8 @@ const MainSlider = () => {
 
   const togglePlayPause = () => {
     const playPauseButton = document.querySelector('.btnchange');
-    const fillElement = document.querySelector(`.${mainSlider.fill}`);
-    const fillCoverElement = document.querySelector(`.${mainSlider.fillCover}`);
+    const fillElement = document.querySelector(`.mainSlider_fill`);
+    const fillCoverElement = document.querySelector(`.mainSlider_fillCover`);
 
     if (isPlaying) {
       swiperTextInstance.autoplay.stop();
@@ -108,14 +108,14 @@ const MainSlider = () => {
             loop={true}
             loopAdditionalSlides={2}
             pagination={{
-              el: `.${mainSlider.numberui}`,
+              el: `.mainSlider_numberui`,
               type: 'fraction',
               formatFractionCurrent: number => ('0' + number).slice(-2),
               formatFractionTotal: number => ('0' + number).slice(-2),
             }}
             navigation={{
-              nextEl: `.${mainSlider.buttonNext}`,
-              prevEl: `.${mainSlider.buttonPrev}`
+              nextEl: `.mainSlider_buttonNext`,
+              prevEl: `.mainSlider_buttonPrev`
             }}
             autoplay={{
               delay: 5000,
@@ -133,16 +133,17 @@ const MainSlider = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+
           <div className={`${mainSlider.mainPagebox} d-flex align-items-center`}>
             <div className={`swiper_pagination ${mainSlider.swiper_progress_bar} d-flex align-items-center`}>
               <span className={mainSlider.slide_progress_bar}>
-                <span className={mainSlider.fill}></span>
-                <span className={`${mainSlider.fillCover}`} style={{ display: isPlaying ? 'none' : 'block' }}></span>
+                <span className={`${mainSlider.fill} mainSlider_fill`}></span>
+                <span className={`${mainSlider.fillCover} mainSlider_fillcover`} style={{ display: isPlaying ? 'none' : 'block' }}></span>
               </span>
             </div>
-            <div className={`swiper_pagination ${mainSlider.numberui}`}></div>
+            <div className={`swiper_pagination ${mainSlider.numberui} mainSlider_numberui`}></div>
             <div className={`${mainSlider.btn} d-flex align-items-center justify-content-between`}>
-              <button className={mainSlider.buttonPrev}>
+              <button className={`${mainSlider.buttonPrev} mainSlider_buttonPrev`}>
                 <span className="visually-hidden">이전</span>
               </button>
               <div className={`${mainSlider.button_auto} d-flex align-items-center`}>
@@ -153,12 +154,13 @@ const MainSlider = () => {
                   <span className="visually-hidden">{isPlaying ? '멈춤' : '재생'}</span>
                 </button>
               </div>
-              <button className={mainSlider.buttonNext}>
+              <button className={`${mainSlider.buttonNext} mainSlider_buttonNext`}>
                 <span className="visually-hidden">다음</span>
               </button>
             </div>
           </div>
         </div>
+
         <div className="col overflow-hidden">
           <Swiper
             className={`${mainSlider.mainImgbox} swiper mx-0 overflow-visible`}
@@ -181,6 +183,7 @@ const MainSlider = () => {
             ))}
           </Swiper>
         </div>
+        
       </div>
     </section>
   );
