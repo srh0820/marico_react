@@ -1,41 +1,5 @@
 // sns
 .sns {
-    img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        border-radius: 10px;
-        position: relative; 
-    }
-
-    .snsImgR {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: 0.5s ease;
-        z-index: 1;
-        &:hover {
-            transform: scale(1.5);
-            z-index: 2; 
-        }
-        &::after {
-            content: "";
-            background: url(../../img/instagram2.svg) no-repeat;
-            width: 13px;
-            height: 13px;
-            display: block;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1;
-        }
-    }
-
-    .blurred {
-        filter: blur(2px);
-    }
-
     .snsLefttextR {
         h2 {
             font-size: 30px;
@@ -69,31 +33,171 @@
             font-weight: 400;
         }
     }
+
+    img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 10px;
+        position: relative; 
+    }
+    .snsImgR {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s ease;
+        z-index: 1;
+        &:hover {
+            transform: scale(1.5);
+            z-index: 2; 
+        }
+        &::after {
+            content: "";
+            background: url(../../img/instagram2.svg) no-repeat;
+            width: 13px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+    }
+
+    .blurred {
+        filter: blur(2px);
+    }
 }
 
 @media (max-width: 1235px) {
-    .sns{
-        .textbox{
-            display: block;
+    .sns {
+        .textbox {
             .snsLefttextR {
                 h2 {
-                    font-size: 30px;
+                    font-size: 28px;
                 }
                 p {
                     font-size: 18px;
                 }
             }
-
-            .snsRighttextR{
-                
-            }
         }
-        .spantext {
-            display: none;
-        }
-        
     }
 }
+
+@media (max-width: 1107px){
+    .sns {
+        .textbox {
+            .colorchange {
+                display: none;
+            }
+            .spantext {
+                display: none;
+            }
+        }
+    }
+}
+
+// 태블릿
+@media (max-width: 1024px) {
+    .sns {
+        .textarea{
+            position: relative;
+            .snsLefttextR {          
+                    left: 0;
+                    top: 0;
+                    width: 492px;
+                    height: 348px;
+                    background-color: #FFEBB7;
+                    border-radius: 10px;
+                    margin-left: 20px;
+                .titlebox {
+                    position: absolute;
+                    margin-top: 60px;
+                    margin-left: 50px;
+                    img {
+                        top: 0;
+                        height: 65px;
+                        width: auto;
+                    }
+                    .text {
+                        h2 {
+                            font-size: 24px !important;
+                            font-weight: 700;
+                        }
+                        p {
+                            font-size: 20px !important;
+                            font-weight: 400;
+                            letter-spacing: -2px !important;
+                        }
+                    }
+                }
+            }
+        }
+    
+        img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 10px;
+            position: relative; 
+        }
+        .snsImgR {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s ease;
+            z-index: 1;
+            margin-left: 70px;
+            &::after {
+                content: "";
+                background: url(../../img/instagram2.svg) no-repeat;
+                width: 13px;
+                height: 13px;
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                z-index: 1;
+            }
+        }
+    }
+}
+    
+// 모바일
+@media (max-width: 767px) {
+    .sns{  
+        .swiper-container {
+            display: block;
+                img {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+                border-radius: 10px;
+                position: relative; 
+            }
+            .snsImgR {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                &::after {
+                    content: "";
+                    background: url(../../img/instagram2.svg) no-repeat;
+                    width: 13px;
+                    height: 13px;
+                    display: block;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+} 
+
 
 
 .mainslider {

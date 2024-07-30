@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
-import 'swiper/css/controller';
 import { Navigation, Pagination, Autoplay, Controller } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import mainSlider from './scss/srh.module.scss';
