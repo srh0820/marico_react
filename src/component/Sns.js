@@ -53,8 +53,8 @@ function Sns() {
                 <div className={snsscss.textarea}>
                     <div className={snsscss.snsLefttextR}>
                         <div className={`${snsscss.titlebox} d-flex`}>
-                            <i><img className={snsscss.instagramimg} src={instagram} alt="인스타그램 아이콘" /></i>
-                            <div className="ms-3">
+                            <i><img src={instagram} alt="인스타그램 아이콘"/></i>
+                            <div className={`${snsscss.text} ms-4`}>
                                 <h2 className="mb-2">#경주어때 #마이리얼경주</h2>
                                 <p> 필수 해시태그와 함께 경주의 멋진 사진을 남겨주시면<br />
                                     추첨을 통해 스타벅스 커피 쿠폰을 보내드립니다.</p>

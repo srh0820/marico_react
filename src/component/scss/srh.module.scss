@@ -14,7 +14,6 @@
             }
         }
     }
-
     .snsRighttextR {
         strong {
             font-size: 14px;
@@ -74,6 +73,9 @@
     .sns {
         .textbox {
             .snsLefttextR {
+                img {
+                    height: 70px;
+                }
                 h2 {
                     font-size: 28px;
                 }
@@ -103,18 +105,24 @@
     .sns {
         .textarea{
             position: relative;
-            .snsLefttextR {          
+            .snsLefttextR {        
+                &::after{
+                    content: "";
+                    position: absolute;
+                    z-index: 0; 
                     left: 0;
                     top: 0;
-                    width: 492px;
+                    width: 490px;
                     height: 348px;
                     background-color: #FFEBB7;
                     border-radius: 10px;
                     margin-left: 20px;
+                }
                 .titlebox {
                     position: absolute;
+                    z-index: 999;
                     margin-top: 60px;
-                    margin-left: 50px;
+                    margin-left: 60px;
                     img {
                         top: 0;
                         height: 65px;
@@ -122,44 +130,66 @@
                     }
                     .text {
                         h2 {
-                            font-size: 24px !important;
-                            font-weight: 700;
+                            font-size: 24px;
                         }
                         p {
-                            font-size: 20px !important;
-                            font-weight: 400;
-                            letter-spacing: -2px !important;
+                            font-size: 20px;
+                            letter-spacing: -2px;
                         }
                     }
                 }
             }
         }
-    
-        img {
-            width: 100%;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover;
-            border-radius: 10px;
-            position: relative; 
-        }
-        .snsImgR {
+        .tablet {
             position: relative;
-            width: 100%;
-            height: 100%;
-            transition: 0.5s ease;
-            z-index: 1;
-            margin-left: 70px;
-            &::after {
-                content: "";
-                background: url(../../img/instagram2.svg) no-repeat;
-                width: 13px;
-                height: 13px;
-                display: block;
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                z-index: 1;
+            top: 190px;
+            
+            .imgWrapper{
+                margin-left: 60px;
+                width: 100%;
+                .imgSwiper{
+                    width: 100%;
+                    height: 348px;
+                    .slideImg{
+                        position: relative;
+                        height: 100%;
+                      
+                        &::after {
+                            content: "";
+                            background: url(../../img/instagram2.svg) no-repeat;
+                            width: 13px;
+                            height: 13px;
+                            display: block;
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            z-index: 1;
+                        }
+                        .img {
+                            border-radius: 10px;
+                            width: 100%;
+                            height: 100%;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                        }
+                    }                         
+                }
+            }
+            
+            .snsRighttextR {
+                margin-left: 60px;
+                strong {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 16px;
+                    span {
+                        &::after {
+                            content: " \00a0\00a0\00a0 | \00a0\00a0\00a0";
+                            color: #000;
+                        }
+                    }
+                }
             }
         }
     }
@@ -168,33 +198,6 @@
 // 모바일
 @media (max-width: 767px) {
     .sns{  
-        .swiper-container {
-            display: block;
-                img {
-                width: 100%;
-                height: 100%;
-                -o-object-fit: cover;
-                object-fit: cover;
-                border-radius: 10px;
-                position: relative; 
-            }
-            .snsImgR {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                &::after {
-                    content: "";
-                    background: url(../../img/instagram2.svg) no-repeat;
-                    width: 13px;
-                    height: 13px;
-                    display: block;
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    z-index: 1;
-                }
-            }
-        }
     }
 } 
 
