@@ -122,18 +122,18 @@
                     position: absolute;
                     z-index: 999;
                     margin-top: 60px;
-                    margin-left: 60px;
+                    margin-left: 70px;
                     img {
                         top: 0;
                         height: 65px;
                         width: auto;
                     }
                     .text {
+                        margin-left: 22px;
                         h2 {
                             font-size: 24px;
                         }
                         p {
-                            font-size: 20px;
                             letter-spacing: -2px;
                         }
                     }
@@ -145,7 +145,7 @@
             top: 190px;
             
             .imgWrapper{
-                margin-left: 60px;
+                margin-left: 70px;
                 width: 100%;
                 .imgSwiper{
                     width: 100%;
@@ -177,7 +177,7 @@
             }
             
             .snsRighttextR {
-                margin-left: 60px;
+                margin-left: 70px;
                 strong {
                     font-size: 16px;
                 }
