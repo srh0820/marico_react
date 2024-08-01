@@ -8,6 +8,7 @@ import imgIndices from '../../json/snsImgdata.json';
 
 function SnsImg() {
     const [isGrid, setIsGrid] = useState(window.innerWidth > 1024);
+    const [spaceBetween, setSpaceBetween] = useState(window.innerWidth <= 490 ? 10 : 20);
 
     // 호버 이벤트 핸들러
     const handleHover = (index) => {
@@ -35,6 +36,7 @@ function SnsImg() {
     useEffect(() => {
         const handleResize = () => {
             setIsGrid(window.innerWidth > 1024);
+            setSpaceBetween(window.innerWidth <= 490 ? 10 : 20);
         };
 
         window.addEventListener('resize', handleResize);
@@ -66,7 +68,7 @@ function SnsImg() {
                     <div className={`${snsscss.imgWrapper} d-flex mb-4`}>
                         <Swiper
                             className={`${snsscss.imgSwiper} overflow-hidden`}
-                            spaceBetween={20}
+                            spaceBetween={spaceBetween}
                             loop={true}
                             slidesPerView={2}
                             slidesPerGroup={1}
