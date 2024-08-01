@@ -62,7 +62,7 @@ function SnsImg() {
                 </div>
             ) : (
                 // tablet
-                <div className={`${snsscss.tablet}`}>
+                <div className={`${snsscss.tablet} overflow-hidden`}>
                     <div className={`${snsscss.imgWrapper} d-flex mb-4`}>
                         <Swiper
                             className={`${snsscss.imgSwiper} overflow-hidden`}
@@ -76,7 +76,7 @@ function SnsImg() {
                             {imgIndices.images.map((index, i) => (
                                 <SwiperSlide key={index} className={snsscss.swiperslide}>
                                     <div className={`${snsscss.slideImg} d-block`}>
-                                        <img src={index} alt={`인스타그램 이미지 ${i}번`} className="img-fluid" />
+                                        <img src={index} alt={`인스타그램 이미지 ${i}번`} className="img-fluid"/>
                                     </div>
                                 </SwiperSlide>
                             ))}

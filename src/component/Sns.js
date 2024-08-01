@@ -49,7 +49,7 @@ function Sns() {
                     </div>
                 </div>
             ) : ( 
-                // tablet
+                // 태블릿 , 모바일
                 <div className={snsscss.textarea}>
                     <div className={snsscss.snsLefttextR}>
                         <div className={`${snsscss.titlebox} d-flex`}>
