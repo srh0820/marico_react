@@ -551,6 +551,7 @@
 @media (max-width: 1600px) {
     .mainslider {
         .mainwrapper {
+            overflow: hidden;
             left: 0px !important;
             margin-left: 50px;
             .mainTextbox{
