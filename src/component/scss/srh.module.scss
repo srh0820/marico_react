@@ -384,7 +384,7 @@
 }
 
 
-
+// mainslider
 .mainslider {
     position: relative;
     transition: 0.5s;
@@ -543,6 +543,328 @@
             height: 580px;
             -o-object-fit: cover;
             object-fit: cover;
+        }
+    }
+}
+
+// mainslider 반응형
+@media (max-width: 1600px) {
+    .mainslider {
+        .mainwrapper {
+            left: 0px !important;
+            margin-left: 50px;
+            .mainTextbox{
+                min-width: 370px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1550px) {
+    .mainslider {
+        .mainwrapper {
+            margin-left: 40px;
+        }
+        .mainImgbox{
+            width: 1000px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .mainslider {
+        .mainwrapper {
+            margin-left: 30px;
+        }
+        .mainImgbox{
+            width: 900px;
+        }
+    }
+}
+
+@media (max-width: 1330px) {
+    .mainslider {
+        .mainwrapper {
+            .mainTextbox{
+                min-width: 350px;
+            }
+        }
+        .mainImgbox{
+            width: 800px;
+        }
+    }
+}
+
+@media (max-width: 1210px) {
+    .mainslider {
+        .mainwrapper {
+            .mainTextbox{
+                min-width: 350px;
+            }
+        }
+        .mainImgbox{
+            width: 750px;
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+    .mainslider {
+        .mainwrapper {
+            margin-left: 50px;
+        }
+        .mainImgbox{
+            width: 660px;       
+        }
+    }
+}
+
+@media (max-width: 1090px) {
+    .mainslider {
+        .mainwrapper {
+            margin-left: 50px;
+            .mainPagebox{
+                .swiper_progress_bar {
+                    width: 150px;        
+                }       
+            }
+        }
+        .mainImgbox{
+            width: 630px;
+        }
+    }
+}
+
+// 태블릿
+@media (min-width: 768px) and (max-width: 1024px) {
+    .mainslider {
+        margin-top: 42px;
+        height: 440px;
+        &::after{
+            height: 82px;
+            z-index: 1;
+        }
+        .mainwrapper{
+            flex-direction: column !important;
+            overflow-x: hidden;
+            left: 0 !important;
+            margin-left: 15px;         
+            .mainTextbox{
+                margin-top: 0;
+                width: 100vw !important;
+                order: 2;
+                z-index: 3;
+                margin-left: 27px;
+                .mbTextSwp{
+                    display: block;
+                    top: -1rem; 
+                }
+                .mainSlidetext{   
+                    p {
+                        font-size: 15px;
+                        height: 30px;
+                        margin-bottom: 0.2rem !important;
+                    }
+                    strong {
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 1.3rem !important;
+                        letter-spacing: -6% !important;
+                    }
+                    .text_with_underline {
+                        display: none !important;
+                    }
+                }
+            }
+            .mainPagebox{
+                display: block;
+                width: 100%;
+                height: 15px;
+                order: 3;  
+                .swiper_progress_bar {
+                    width: 150px;             
+                  }
+                .numberui{
+                    width: auto;
+                    margin-left: 25px;
+                    font-size: 15px;
+                }
+                .btn{
+                    margin-left: 25px;
+                    .buttonPrev{
+                        display: none;
+                    }              
+                    .buttonNext{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .mainImgbox{
+            // z-index: 2;
+            margin-top: 15px;     
+            height: 350px;
+            width: 500px;
+            order: 1;  
+            .img{
+                height: 350px;
+            }
+        }
+    }
+}
+
+// 모바일 - 소형
+@media (min-width: 481px) and (max-width: 767px) {
+    .mainslider {
+        height: 340px;
+        &::after{
+            height: 82px;
+            z-index: 1;
+        }
+        .mainwrapper{
+            flex-direction: column !important;
+            overflow-x: hidden;
+            left: 0 !important;
+            margin-left: 15px;         
+            .mainTextbox{
+                margin-top: 0;
+                width: 100vw !important;
+                order: 2;
+                z-index: 3;
+                margin-left: 27px;
+                .mbTextSwp{
+                    display: block;
+                    top: -1rem; 
+                }
+                .mainSlidetext{   
+                    p {
+                        font-size: 15px;
+                        height: 30px;
+                        margin-bottom: 0.2rem !important;
+                    }
+                    strong {
+                        font-size: 15px;
+                        font-weight: 500;
+                        line-height: 1.3rem !important;
+                        letter-spacing: -6% !important;
+                    }
+                    .text_with_underline {
+                        display: none !important;
+                    }
+                }
+            }
+            .mainPagebox{
+                display: block;
+                width: 100%;
+                height: 15px;
+                order: 3;  
+                .swiper_progress_bar {
+                    width: 150px;             
+                  }
+                .numberui{
+                    width: auto;
+                    margin-left: 25px;
+                    font-size: 15px;
+                }
+                .btn{
+                    margin-left: 25px;
+                    .buttonPrev{
+                        display: none;
+                    }              
+                    .buttonNext{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .mainImgbox{
+            // z-index: 2;
+            margin-top: 15px;     
+            height: 250px;
+            width: 400px;
+            order: 1;  
+            .img{
+                height: 250px;
+            }
+        }
+    }
+}
+
+// 모바일 - 초소형
+@media (min-width: 320px) and (max-width: 480px) {
+    .mainslider {
+        margin-top: 42px;
+        height: 335px;
+        &::after{
+            height: 78px;
+            z-index: 1;
+        }
+        .mainwrapper{
+            flex-direction: column !important;
+            overflow-x: hidden;
+            left: 0 !important;
+            margin-left: 15px;         
+            .mainTextbox{
+                margin-top: 0;
+                width: 100vw !important;
+                order: 2;
+                z-index: 3;
+                margin-left: 27px;
+                .mbTextSwp{
+                    display: block;
+                    top: -1rem; 
+                }
+                .mainSlidetext{   
+                    p {
+                        font-size: 13px;
+                        width: 105px;
+                        height: 22px;
+                        margin-bottom: 0.5rem !important;
+                    }
+                    strong {
+                        font-size: 13px;
+                        font-weight: 500;
+                        line-height: 1.2rem !important;
+                        letter-spacing: -6% !important;
+                    }
+                    .text_with_underline {
+                        display: none !important;
+                    }
+                }
+            }
+            .mainPagebox{
+                display: block;
+                width: 100%;
+                height: 12px;
+                order: 3;  
+                .swiper_progress_bar {
+                    width: 150px;             
+                  }
+                .numberui{
+                    width: auto;
+                    margin-left: 25px;
+                    font-size: 13px;
+                }
+                .btn{
+                    margin-left: 25px;
+                    .buttonPrev{
+                        display: none;
+                    }              
+                    .buttonNext{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .mainImgbox{
+            // z-index: 2;
+            margin-top: 15px;     
+            height: 250px;
+            width: 279px;
+            order: 1;  
+            .img{
+                height: 250px;
+            }
         }
     }
 }

@@ -1,10 +1,10 @@
 import Sns from './component/Sns';
-// import Main from './component/Mainslider';
+import Main from './component/Mainslider';
 
 function Mrc(){
     return(
         <>
-            {/* <Main></Main> */}
+            <Main></Main>
             <Sns></Sns>
         </>
     )
