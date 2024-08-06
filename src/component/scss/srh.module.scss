@@ -70,7 +70,37 @@
 }
 
 // sns 반응형
-@media (max-width: 1235px) {
+@media (max-width: 1560px) {
+    .sns {
+        .snsImgR {
+            transition: 0.4s ease;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+    .sns {
+        .hovernth {
+            &:nth-child(1),
+            &:nth-child(5) { 
+                .snsImgR:hover {
+                    transform-origin: left ;
+                }
+            }
+            &:nth-child(4), 
+            &:nth-child(8) { 
+                .snsImgR:hover {
+                    transform-origin: right 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1255px) {
     .sns {
         .textbox {
             .snsLefttextR {
@@ -88,7 +118,7 @@
     }
 }
 
-@media (max-width: 1107px) {
+@media (max-width: 1125px) {
     .sns {
         .textbox {
             .colorchange {
@@ -145,7 +175,7 @@
         }
         .tablet {
             position: relative;
-            top: 190px;
+            padding-top: 190px;
             .imgWrapper{
                 margin-left: 70px;
                 width: 100vw;
@@ -219,7 +249,7 @@
         }
         .tablet {
             position: relative;
-            top: 170px;
+            padding-top: 170px;
             .imgWrapper {
                 margin-left: 20px;
                 .imgSwiper {
@@ -271,7 +301,7 @@
             }
         }
         .tablet {
-            top: 110px;
+            padding-top: 110px;
             .imgWrapper{
                 margin-left: 15px;
                 .imgSwiper{
@@ -348,6 +378,10 @@
             .snsLefttextR {   
                 .titlebox {
                     .text {
+                        margin-left: 7px;
+                        h2{
+                            font-size: 16px;
+                        }
                         p {
                             font-size: 13px;
                         }
@@ -356,18 +390,10 @@
             }
         }
         .tablet {
-            position: relative;
             .imgWrapper{
                 width: 100vw;
                 .imgSwiper{
-                    // width: 100vw;
-                    height: 123px;
-                    height: 123px;
-                    .slideImg{
-                        position: relative;
-                        height: 100%;
-                    }                         
-                    height: 123px;                     
+                    height: 123px;              
                     .slideImg{
                         position: relative;
                         height: 100%;
@@ -382,7 +408,6 @@
         }
     }
 }
-
 
 // mainslider
 .mainslider {
@@ -639,17 +664,17 @@
 // 태블릿
 @media (min-width: 768px) and (max-width: 1024px) {
     .mainslider {
-        margin-top: 42px;
-        height: 440px;
+        margin-top: 70px;
+        height: 460px;
         &::after{
-            height: 82px;
+            height: 90px;
             z-index: 1;
         }
         .mainwrapper{
             flex-direction: column !important;
             overflow-x: hidden;
             left: 0 !important;
-            margin-left: 15px;         
+            margin-left: 25px;         
             .mainTextbox{
                 margin-top: 0;
                 width: 100vw !important;
@@ -703,7 +728,7 @@
         }
         .mainImgbox{
             // z-index: 2;
-            margin-top: 15px;     
+            margin-top: 25px;     
             height: 350px;
             width: 500px;
             order: 1;  
@@ -717,6 +742,7 @@
 // 모바일 - 소형
 @media (min-width: 481px) and (max-width: 767px) {
     .mainslider {
+        margin-top: 69.8px;
         height: 340px;
         &::after{
             height: 82px;
@@ -794,7 +820,7 @@
 // 모바일 - 초소형
 @media (min-width: 320px) and (max-width: 480px) {
     .mainslider {
-        margin-top: 42px;
+        margin-top: 58.8px;
         height: 335px;
         &::after{
             height: 78px;
