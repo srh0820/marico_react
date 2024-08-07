@@ -144,18 +144,16 @@
                     left: 0;
                     top: 0;
                     width: 45vw;
-                    // min-width: px;
                     height: 35vw;
                     min-height: 200px;
                     background-color: #FFEBB7;
-                    border-radius: 10px;
-                    margin-left: 20px;
+                    border-radius: 0 10px 10px 0;
                 }
                 .titlebox {
                     position: absolute;
                     z-index: 999;
                     margin-top: 60px;
-                    margin-left: 70px;
+                    margin-left: 50px;
                     img {
                         top: 0;
                         height: 65px;
@@ -177,7 +175,7 @@
             position: relative;
             padding-top: 190px;
             .imgWrapper{
-                margin-left: 70px;
+                margin-left: 50px;
                 width: 100vw;
                 .imgSwiper{
                     width: 100vw;
@@ -207,7 +205,7 @@
                 }
             }
             .snsRighttextR {
-                margin-left: 70px;
+                margin-left: 50px;
                 strong {
                     font-size: 16px;
                 }
@@ -226,7 +224,7 @@
 }
     
 // 모바일
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .sns {
         .textarea {
             .snsLefttextR {
@@ -241,7 +239,7 @@
                         font-size: 20px;
                     }
                     p {
-                        font-size: 16px;
+                        font-size: 18px;
                         letter-spacing: -1px !important;
                     }
                 }
@@ -260,11 +258,11 @@
             .snsRighttextR {
                 margin-left: 20px;
                 strong {
-                    font-size: 14px;
+                    font-size: 15px;
                     width: 85px;
                 }
                 p {
-                    font-size: 14px;
+                    font-size: 15px;
                 }
             }
         }
@@ -317,13 +315,11 @@
             .snsRighttextR {
                 margin-left: 15px;
                 strong {
-                    font-size: 13px;
+                    font-size: 15px;
                     font-weight: 400;
-                    width: 70px;
-                    height: 30px;
                 }
                 p {
-                    font-size: 13px;
+                    font-size: 15px;
                     span {
                         &::after {
                             content: " \00a0\00a0 | \00a0\00a0";
@@ -335,12 +331,12 @@
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 465px) {
     .sns {
         .tablet{
             .snsRighttextR {
                 p {
-                    font-size: 13px;
+                    font-size: 14px;
                     span {
                         &::after {
                             content: "";
@@ -366,6 +362,18 @@
                             font-size: 13px;
                         }
                     }
+                }
+            }
+        }
+        .tablet {
+            .imgWrapper{
+                width: 100vw;
+                .imgSwiper{
+                    height: 123px;              
+                    .slideImg{
+                        position: relative;
+                        height: 100%;
+                    }                         
                 }
             }
         }
@@ -401,8 +409,11 @@
                 }
             }
             .snsRighttextR {
+                p {
+                    font-size: 13px;
+                }
                 strong {
-                    height: 22px;
+                    font-size: 13px;
                 }
             }
         }
