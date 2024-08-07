@@ -11,7 +11,7 @@ const MainSlider = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [swiperTextInstance, setSwiperTextInstance] = useState(null);
   const [swiperImgInstance, setSwiperImgInstance] = useState(null);
-  const [spaceBetween, setSpaceBetween] = useState(window.innerWidth <= 480 ? 10 : 30);
+  const [spaceBetween, setSpaceBetween] = useState(window.innerWidth <= 767 ? 10 : 30);
 
   const resetProgressBar = () => {
     const fillElement = document.querySelector(`.mainSlider_fill`);
@@ -65,7 +65,7 @@ const MainSlider = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setSpaceBetween(window.innerWidth <= 480 ? 10 : 30);
+      setSpaceBetween(window.innerWidth <= 767 ? 10 : 30);
     };
 
     window.addEventListener('resize', handleResize);
